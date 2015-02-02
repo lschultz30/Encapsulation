@@ -9,7 +9,7 @@ package lab1;
  * @version     1.01
  */
 public class Startup {
-    public static void main(String[] args) {
+    public static void main(String[] args){
         /*
             Are we violating SRP (Single Responsibility Principle)?
         
@@ -20,15 +20,13 @@ public class Startup {
             not have to be a GUI class.
         */
         Employee employee = new Employee();
-        employee.firstName = "Peter";
-        employee.lastName = "Piper";
-        employee.ssn = "333-1234";
+         employee.setFirstName("Peter");
+         employee.setLastName("Schwartz ");
+         employee.setSsn("001022042");
+         employee.setCubeId("456");
+         
         
-        employee.meetDepartmentStaff();
-        employee.meetWithHrForBenefitAndSalryInfo();
-        employee.reviewDeptPolicies();
-
-        System.out.println("The employee's status is: " + employee.getStatus());
+        System.out.println("The employee's status is: " + HrManager.getStatus());
     }
     
     
